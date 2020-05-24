@@ -1,5 +1,5 @@
 # Image Sharpening - 影像銳化
-### Laplacian Kernal
+### Laplacian Kernel
 <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-1%20%26%20-1%5C%5C-1%20%26%208%20%26%20-1%5C%5C-1%20%26%20-1%20%26%20-1%5C%5C%5Cend%7Bbmatrix%7D%09" /> 
 
 #### Gradient Kernel
