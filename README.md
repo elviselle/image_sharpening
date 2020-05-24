@@ -20,7 +20,7 @@ y 方向，<img src="https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%5
 
 ### Laplacian Kernel
 
-<img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D0%20%26%20-1%20%26%200%5C%5C-1%20%26%204%20%26%20-1%20%5C%5C0%20%26%20-1%20%26%200%5Cend%7Bbmatrix%7D%09" />
+<img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D0%20%26%20-1%20%26%200%5C%5C-1%20%26%204%20%26%20-1%20%5C%5C0%20%26%20-1%20%26%200%5Cend%7Bbmatrix%7D" />
 
 <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-1%20%26%20-1%5C%5C-1%20%26%208%20%26%20-1%5C%5C-1%20%26%20-1%20%26%20-1%5C%5C%5Cend%7Bbmatrix%7D%09" /> 
 
