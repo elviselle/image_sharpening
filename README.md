@@ -1,6 +1,6 @@
 # Image Sharpening - 影像銳化
 
-### 影像的座標系不是連續
+### 影像的座標系不是連續，x軸座標 0, 1, 2, ..., x-1, x, x+1, ...，遞增 1。
 
 ### 單一變數，一階微分定義
 <img src="https://latex.codecogs.com/gif.latex?%5Cnabla%20f%20%3D%20%5Cfrac%7B%5Cpartial%20f%7D%7B%5Cpartial%20x%7D%20%3D%20f%28x%2B1%29%20-%20f%28x%29" /> 
