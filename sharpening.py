@@ -127,7 +127,7 @@ for y in range(padding_pic.shape[0]-2):
         print(y, x, avg_r)
     print()
 
-# edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, edge_blur_pic_normalized)  ## 這個不會成功，與下面的 normalization 0, 1 有什麼差別？
+# edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, edge_blur_pic_normalized)  ## 這個不會成功，與下面的 normalization 0, 1 有什麼差別？  mean 在 0 的 normalization?? 有正有負？
 # edge_blur_pic_normalized2 = edge_blur_pic / np.linalg.norm(edge_blur_pic)   ## 跟上一行用 cv2 算 normalization 一樣的值
 edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, None, 0, 1, cv2.NORM_MINMAX)  ## 這個會成功
 print('edge_blur_pic_normalized_1:\n', edge_blur_pic_normalized)
