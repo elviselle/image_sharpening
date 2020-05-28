@@ -24,10 +24,13 @@ average_mask = np.array(
     [0.11111111, 0.11111111, 0.11111111],
     [0.11111111, 0.11111111, 0.11111111]])   # 0.1111111 means 1/9
 
-img_file = 'flower_1'
+# img_file = 'flower_1'
 # img_file = 'bird_4_corp'
 # img_file = '20070401_121'
 # img_file = 'IMG_7367_2'
+# img_file = 'lenna'
+# img_file = 'IMG_9859'
+img_file = 'bird_1'
 pic = cv2.imread("images/" + img_file+'.jpg')
 print(pic.shape)
 # print(pic.shape[0] * pic.shape[1])
