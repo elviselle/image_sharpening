@@ -27,10 +27,14 @@
     * > Laplacian Kernel 擴展形式
       <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-1%20%26%20-1%5C%5C-1%20%26%208%20%26%20-1%5C%5C-1%20%26%20-1%20%26%20-1%5C%5C%5Cend%7Bbmatrix%7D%09" /> 
 
-### 銳化 <<版本一>>：原圖 + Laplacian Operation(Convolution)
-原圖與 <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-1%20%26%20-1%5C%5C-1%20%26%208%20%26%20-1%5C%5C-1%20%26%20-1%20%26%20-1%5C%5C%5Cend%7Bbmatrix%7D%09" />  做 Convolution
+---
 
-<img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7Df%28x-1%2Cy-1%29%20%26%20f%28x%2Cy-1%29%29%20%26%20f%28x%2B1%2C%20y-1%29%5C%5Cf%28x-1%2C%20y%29%20%26%20f%28x%2C%20y%29%20%26%20f%28x%2B1%2C%20y%29%20%5C%5Cf%28x-1%2C%20y%2B1%29%20%26%20f%28x%2C%20y%2B1%29%20%26%20f%28x%2B1%2C%20y%2B1%29%5Cend%7Bbmatrix%7D" />  與 <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-1%20%26%20-1%5C%5C-1%20%26%208%20%26%20-1%5C%5C-1%20%26%20-1%20%26%20-1%5C%5C%5Cend%7Bbmatrix%7D%09" />  做 Convolution
+### 銳化 <版本一>：
+
+**銳化 = 原圖 + (原圖與Laplacian Kernel的Convolution)**
+
+---
+
 
 #### Gradient Kernel
 ##### Horizontal 
