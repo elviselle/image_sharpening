@@ -47,7 +47,16 @@
 
 
 ## 銳化效果比較
-|原圖|銳化法一|銳化法二(Sobel)|
-|-|-|-|
-| <img src="images/20070401_121.jpg" width="600" />  | <img src="output/20070401_121_shapred.jpg" width="600" /> | <img src="output/20070401_121_shapred_sobel.jpg" width="600" /> |
-| <img src="images/lenna.jpg" width="600" />  | <img src="output/lenna_shapred.jpg" width="600" /> | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
+| | 20070401_121.jpg |
+|-|-|
+| 原圖 | <img src="images/20070401_121.jpg" width="600" />  | 
+| 銳化法一 | <img src="output/20070401_121_shapred.jpg" width="600" /> | 
+| 銳化法二(Sobel) | <img src="output/20070401_121_shapred_sobel.jpg" width="600" /> |
+
+| | lenna.jpg |
+|-|-|
+| 原圖 | <img src="images/lenna.jpg" width="600" />  | 
+| 銳化法一 | <img src="output/lenna_shapred.jpg" width="600" /> | 
+| 銳化法二(Sobel) | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
+
+
