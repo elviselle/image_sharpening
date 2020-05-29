@@ -92,14 +92,14 @@
 ## 其他照片銳化效果比較
 | | 20070401_121.jpg |
 |-|-|
-| 原圖 | <img src="images/20070401_121.jpg" width="600" />  | 
-| 銳化<br/>版本一 | <img src="output/20070401_121_shapred.jpg" width="600" /> | 
-| 銳化<br/>版本二 | <img src="output/20070401_121_shapred_sobel.jpg" width="600" /> |
+| 原圖 | <img src="images/20070401_121.jpg"/>  | 
+| 銳化<br/>版本一 | <img src="output/20070401_121_shapred.jpg" /> | 
+| 銳化<br/>版本二 | <img src="output/20070401_121_shapred_sobel.jpg" /> |
 
-| | lenna.jpg |
+| | flower_1.jpg |
 |-|-|
-| 原圖 | <img src="images/lenna.jpg" width="600" />  | 
-| 銳化<br/>版本一 | <img src="output/lenna_shapred.jpg" width="600" /> | 
-| 銳化<br/>版本二 | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
+| 原圖 | <img src="images/flower_1.jpg" />  | 
+| 銳化<br/>版本一 | <img src="output/flower_1_shapred.jpg"/> | 
+| 銳化<br/>版本二 | <img src="output/flower_1_shapred_sobel.jpg" /> |
 
 
