@@ -24,13 +24,15 @@ average_mask = np.array(
     [0.11111111, 0.11111111, 0.11111111],
     [0.11111111, 0.11111111, 0.11111111]])   # 0.1111111 means 1/9
 
-# img_file = 'flower_1'
+# img_file = 'flower_2'
 # img_file = 'bird_4_corp'
 # img_file = '20070401_121'
 # img_file = 'IMG_7367_2'
 # img_file = 'lenna'
 # img_file = 'IMG_9859'
-img_file = 'bird_1'
+img_file = 'bird_4'
+# img_file = 'bug_1'
+# img_file = 'butterfly'
 pic = cv2.imread("images/" + img_file+'.jpg')
 print(pic.shape)
 # print(pic.shape[0] * pic.shape[1])
@@ -44,6 +46,13 @@ height = pic.shape[0]
 print(padding_pic[1:(height+1), 1:(width+1), :].shape)
 
 padding_pic[1:height+1, 1:width+1, :] = pic
+
+# padding 出的的上下左右，以原圖的上下左右邊去填補
+padding_pic[:,0:1,:] = padding_pic[:,1:2,:]
+padding_pic[:,width+1:width+2,:] = padding_pic[:,width:width+1,:]
+padding_pic[0:1,:,:] = padding_pic[1:2,:,:]
+padding_pic[height+1:height+2,:,:] = padding_pic[height:height+1,:,:]
+
 # padding_pic = padding_pic.astype(np.uint8)
 
 
@@ -170,10 +179,10 @@ cv2.imwrite('output/' + img_file + "_avgMtpLapl.jpg", avgMtpLapl)
 cv2.imwrite('output/' + img_file + "_laplacian.jpg", laplacian_pic)
 
 # cv2.imshow('sharped', sharped_pic)
-cv2.imwrite('output/' + img_file + "_shapred.jpg", sharped_pic)
+cv2.imwrite('output/' + img_file + "_sharped.jpg", sharped_pic)
 
 # cv2.imshow('sharped_sobel', sharped_sobel_pic)
-cv2.imwrite('output/' + img_file + "_shapred_sobel.jpg", sharped_sobel_pic)
+cv2.imwrite('output/' + img_file + "_sharped_sobel.jpg", sharped_sobel_pic)
 
 # +
 # cv2.waitKey(0)
