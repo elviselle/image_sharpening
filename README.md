@@ -47,6 +47,14 @@
  
 ---
 
+## 銳化 <版本二>： Sobel
+  * #### 銳化，但不要有雜訊。只銳化 edge 的地方，如果原本平坦的地方，有發生二階微分較高的情形，將它抹去。
+  * #### 方法:
+    * #### step 1) 原圖經過 Sobel Kernel 找 Edge。
+    * #### step 2) Edge 經過 Average Kernel 模糊化。
+    * #### step 3) 模糊化後的 Edge，標準化到 0~1 之間。
+    * #### step 4) 原圖 + Lapacian * Step3。
+
 
 #### Gradient Kernel
 ##### Horizontal 
