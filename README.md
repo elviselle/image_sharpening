@@ -49,4 +49,4 @@
 ## 銳化效果比較
 |原圖|銳化法一|銳化法二(Sobel)|
 |-|-|-|
-| ![](https://github.com/elviselle/image_sharpening/images/bird_2.jpg = 250x) | ![](https://github.com/elviselle/image_sharpening/output/bird_2_sharped.jpg = 250x) | ![](https://github.com/elviselle/image_sharpening/output/bird_2_sharped_sobel.jpg = 250x) |
+| <img src="images/20070401_121.jpg" width="200" />  | <img src="output/20070401_121_shapred.jpg" width="200" /> | <img src="output/20070401_121_shapred_sobel.jpg" width="200" /> |
