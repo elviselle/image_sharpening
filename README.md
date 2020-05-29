@@ -8,17 +8,15 @@
   * ### 單一變數，二階微分定義
     * <img src="https://latex.codecogs.com/gif.latex?%5Cnabla%5E2%20f%20%3D%20%5Cfrac%7B%5Cpartial%5E2%20f%7D%7B%5Cpartial%20x%5E2%7D%20%3D%20f%28x%2B1%29%20%2B%20f%28x-1%29%20-%202%20f%28x%29" /> 
 
-### 
+  * ### 影像可表示為 x, y 軸兩變數的函數，f(x, y)為座標 (x, y) 的 intensity
+    * #### 影像的二階微分定義，為在 f 分別對 x 及 y 進行兩次偏微分，然後加總。根據上式(二次微分)，得到
+      * x 方向，<img src="https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%5E2%20f%7D%7B%5Cpartial%20x%5E2%7D%20%3D%20f%28x%2B1%2C%20y%29%20%2B%20f%28x-1%2C%20y%29%20-%202%20f%28x%2C%20y%29" />
 
-### 影像可表示為 x, y 軸兩變數的函數，f(x, y)為座標 (x, y) 的 intensity
-#### 影像的二階微分定義，為在 f 分別對 x 及 y 進行兩次偏微分，然後加總。根據上式(二次微分)，得到
-x 方向，<img src="https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%5E2%20f%7D%7B%5Cpartial%20x%5E2%7D%20%3D%20f%28x%2B1%2C%20y%29%20%2B%20f%28x-1%2C%20y%29%20-%202%20f%28x%2C%20y%29" />
+      * y 方向，<img src="https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%5E2%20f%7D%7B%5Cpartial%20y%5E2%7D%20%3D%20f%28x%2C%20y%2B1%29%20%2B%20f%28x%2C%20y-1%29%20-%202%20f%28x%2C%20y%29" />
 
-y 方向，<img src="https://latex.codecogs.com/gif.latex?%5Cfrac%7B%5Cpartial%5E2%20f%7D%7B%5Cpartial%20y%5E2%7D%20%3D%20f%28x%2C%20y%2B1%29%20%2B%20f%28x%2C%20y-1%29%20-%202%20f%28x%2C%20y%29" />
+      * 上兩式加總，得
 
-上兩式加總，得
-
-<img src="https://latex.codecogs.com/gif.latex?%5Cnabla%5E2%20f%28x%2C%20y%29%20%3D%20f%28x%2B1%2C%20y%29%20%2B%20f%28x-1%2C%20y%29%20%2B%20f%28x%2C%20y%2B1%29%20%2B%20f%28x%2C%20y-1%29%20-%204%20f%28x%2C%20y%29" />
+        <img src="https://latex.codecogs.com/gif.latex?%5Cnabla%5E2%20f%28x%2C%20y%29%20%3D%20f%28x%2B1%2C%20y%29%20%2B%20f%28x-1%2C%20y%29%20%2B%20f%28x%2C%20y%2B1%29%20%2B%20f%28x%2C%20y-1%29%20-%204%20f%28x%2C%20y%29" />
 
 ### Laplacian Kernel
 
