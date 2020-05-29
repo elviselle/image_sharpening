@@ -38,11 +38,10 @@
 
  **原圖**
 <img src="images/lenna.jpg" />
-
  **銳化 <版本一>**
 <img src="output/lenna_shapred.jpg" />
-
- **是銳化了，但也製造出很多雜訊**
+ **缺點∶是銳化了，但也製造出很多雜訊!**
+ 
 ---
 
 
