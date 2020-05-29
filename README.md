@@ -57,6 +57,6 @@
 |-|-|
 | 原圖 | <img src="images/lenna.jpg" width="600" />  | 
 | 銳化法一 | <img src="output/lenna_shapred.jpg" width="600" /> | 
-| 銳化法二 -- (Sobel) | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
+| 銳化法二 (Sobel) | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
 
 
