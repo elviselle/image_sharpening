@@ -55,13 +55,29 @@
     * #### step 3) 模糊化後的 Edge，標準化到 0~1 之間。
     * #### step 4) 原圖 + Lapacian * Step3。
 
+  * #### Step 1
+    * #### 原圖分別計算水平、垂直 Sobel 運算後，加總
+    * #### Sobel Kernel
+      * ##### Horizontal 
+        <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-2%20%26%20-1%5C%5C0%20%26%200%20%26%200%5C%5C1%20%26%202%20%26%201%5C%5C%5Cend%7Bbmatrix%7D" /> 
 
-#### Gradient Kernel
-##### Horizontal 
-<img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-2%20%26%20-1%5C%5C0%20%26%200%20%26%200%5C%5C1%20%26%202%20%26%201%5C%5C%5Cend%7Bbmatrix%7D" /> 
+      * ##### Vritical 
+        <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%200%20%26%201%5C%5C-2%20%26%200%20%26%202%5C%5C-1%20%26%202%20%26%201%5C%5C%5Cend%7Bbmatrix%7D" />
 
-##### Vritical 
-<img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%200%20%26%201%5C%5C-2%20%26%200%20%26%202%5C%5C-1%20%26%202%20%26%201%5C%5C%5Cend%7Bbmatrix%7D" />
+    <img src="output/lenna_gradient.jpg" />
+
+  * #### Step 2
+    * #### 將 Step 1 Edge 模糊化。對 Step 1 以 Average Kernel 進行 Convolution 運算。
+    * #### Average Kernel
+      <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D%5Cfrac%7B1%7D%7B9%7D%20%26%20%5Cfrac%7B1%7D%7B9%7D%20%26%20%5Cfrac%7B1%7D%7B9%7D%5C%5C%5Cfrac%7B1%7D%7B9%7D%20%26%20%5Cfrac%7B1%7D%7B9%7D%20%26%20%5Cfrac%7B1%7D%7B9%7D%5C%5C%5Cfrac%7B1%7D%7B9%7D%20%26%20%5Cfrac%7B1%7D%7B9%7D%20%26%20%5Cfrac%7B1%7D%7B9%7D%5C%5C%5Cend%7Bbmatrix%7D" />
+
+    <img src="output/lenna_gradient_blur.jpg" />
+
+  * #### Step 3
+    * #### 將 Step 2 模糊化後的 Edge，標準化到 0~1 之間。
+    
+    cv2.normalize(edge_blur_pic, None, 0, 1, cv2.NORM_MINMAX)    
+
 
 
 ## 銳化效果比較
