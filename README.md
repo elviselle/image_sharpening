@@ -37,11 +37,11 @@
 
  **即 銳化 = 原圖 + (原圖與 Laplacian Kernel 擴展形式的 Convolution 運算)**
 
- **原圖**
+ **原圖**  <img src="https://latex.codecogs.com/gif.latex?f%28x%2Cy%29" />
 <img src="images/lenna.jpg" />
- **原圖經過 Laplacian Convolution得到**
+ **原圖經過 Laplacian Convolution得到下圖**    <img src="https://latex.codecogs.com/gif.latex?%5Cnabla%5E2%20f%28x%2Cy%29" />
 <img src="output/lenna_laplacian.jpg" />
- **銳化 <版本一>**
+ **銳化 <版本一>**  <img src="https://latex.codecogs.com/gif.latex?f%28x%2Cy%29%2B%5Cnabla%5E2%20f%28x%2Cy%29" />
 <img src="output/lenna_shapred.jpg" />
  **缺點∶是銳化了，但也製造出很多雜訊!**
  
