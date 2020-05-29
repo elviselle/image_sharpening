@@ -39,6 +39,8 @@
 
  **原圖**
 <img src="images/lenna.jpg" />
+ **原圖經過 Laplacian Convolution得到**
+<img src="output/lenna_laplacian.jpg" />
  **銳化 <版本一>**
 <img src="output/lenna_shapred.jpg" />
  **缺點∶是銳化了，但也製造出很多雜訊!**
