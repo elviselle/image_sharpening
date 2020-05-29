@@ -79,18 +79,27 @@
     cv2.normalize(step_2_blur, None, 0, 1, cv2.NORM_MINMAX)    
 ```
 
+  * #### Step 4
+    * #### 原圖 + Lapacian * Step 3
+    * #### Laplacian * Step 3 有助於將雜訊去除，只留下 edge 處要進行銳化。
 
-## 銳化效果比較
+    * #### 銳化效果版本二。對比原圖，細節被加強，且沒有版本一嚴重的雜訊。
+    <img src="output/lenna_shapred_sobel.jpg" />
+
+    * #### 原圖
+    <img src="images/lenna.jpg" />
+
+## 其他照片銳化效果比較
 | | 20070401_121.jpg |
 |-|-|
 | 原圖 | <img src="images/20070401_121.jpg" width="600" />  | 
-| 銳化法一 | <img src="output/20070401_121_shapred.jpg" width="600" /> | 
-| 銳化法二    (Sobel) | <img src="output/20070401_121_shapred_sobel.jpg" width="600" /> |
+| 銳化<br/>版本一 | <img src="output/20070401_121_shapred.jpg" width="600" /> | 
+| 銳化<br/>版本二 | <img src="output/20070401_121_shapred_sobel.jpg" width="600" /> |
 
 | | lenna.jpg |
 |-|-|
 | 原圖 | <img src="images/lenna.jpg" width="600" />  | 
-| 銳化法一 | <img src="output/lenna_shapred.jpg" width="600" /> | 
-| 銳化法二 (Sobel) | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
+| 銳化<br/>版本一 | <img src="output/lenna_shapred.jpg" width="600" /> | 
+| 銳化<br/>版本二 | <img src="output/lenna_shapred_sobel.jpg" width="600" /> |
 
 
