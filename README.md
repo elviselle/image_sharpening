@@ -1,5 +1,7 @@
 # Image Sharpening - 影像銳化
 
+## 影像微分
+
   * ### 影像的座標系不是連續，x軸座標 0, 1, 2, ..., x-1, x, x+1, ...，遞增 1。
 
   * ### 單一變數，一階微分定義
@@ -29,9 +31,9 @@
 
 ---
 
-### 銳化 <版本一>：
+## 銳化 <版本一>：
 
-**銳化 = 原圖 + (原圖與Laplacian Kernel的Convolution)**
+**銳化 = 原圖 + (原圖與Laplacian Kernel擴展形式的Convolution)**
 
 ---
 
@@ -42,3 +44,9 @@
 
 ##### Vritical 
 <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%200%20%26%201%5C%5C-2%20%26%200%20%26%202%5C%5C-1%20%26%202%20%26%201%5C%5C%5Cend%7Bbmatrix%7D" />
+
+
+## 銳化效果比較
+|原圖|銳化法一|銳化法二(Sobel)|
+|-|-|-|
+| | | |
