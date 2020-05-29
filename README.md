@@ -75,9 +75,9 @@
 
   * #### Step 3
     * #### 將 Step 2 模糊化後的 Edge，標準化到 0~1 之間。
-    
-    cv2.normalize(edge_blur_pic, None, 0, 1, cv2.NORM_MINMAX)    
-
+```python    
+    cv2.normalize(step_2_blur, None, 0, 1, cv2.NORM_MINMAX)    
+```
 
 
 ## 銳化效果比較
