@@ -33,8 +33,16 @@
 
 ## 銳化 <版本一>：
 
-**銳化 = 原圖 + (原圖與Laplacian Kernel擴展形式的Convolution)**
+<img src="https://latex.codecogs.com/gif.latex?f%27%28x%2C%20y%29%20%3D%20f%28x%2Cy%29%20%2B%20%5Cnabla%5E2f%28x%2Cy%29" />
+ **即 銳化 = 原圖 + (原圖與 Laplacian Kernel 擴展形式的 Convolution 運算)**
 
+ **原圖**
+<img src="images/lenna.jpg" />
+
+ **銳化 <版本一>**
+<img src="output/lenna_shapred.jpg" />
+
+ **是銳化了，但也製造出很多雜訊**
 ---
 
 
