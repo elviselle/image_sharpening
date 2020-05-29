@@ -43,7 +43,7 @@
 <img src="output/lenna_laplacian.jpg" />
  **銳化 <版本一>**  <img src="https://latex.codecogs.com/gif.latex?f%28x%2Cy%29%2B%5Cnabla%5E2%20f%28x%2Cy%29" />
 <img src="output/lenna_shapred.jpg" />
- **缺點∶是銳化了，但也製造出很多雜訊!**
+ ### 缺點∶是銳化了，但也製造出很多雜訊!
  
 ---
 
