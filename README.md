@@ -75,6 +75,7 @@
 
   * #### Step 3
     * #### 將 Step 2 模糊化後的 Edge，標準化到 0~1 之間。
+    * #### 使用 OpenCV 提供的 Normalization 函式
 ```python    
     cv2.normalize(step_2_blur, None, 0, 1, cv2.NORM_MINMAX)    
 ```
