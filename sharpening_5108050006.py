@@ -64,6 +64,7 @@ laplacian_pic = np.zeros(pic.shape)
 sharped_pic = np.zeros(pic.shape)
 sharped_sobel_pic = np.zeros(pic.shape)
 
+# 計算 Laplacian 與 Sobel
 for y in range(padding_pic.shape[0]-2):
     for x in range(padding_pic.shape[1]-2):
         
@@ -71,24 +72,20 @@ for y in range(padding_pic.shape[0]-2):
         subimg_g = padding_pic[y:y+3, x:x+3, 1]
         subimg_b = padding_pic[y:y+3, x:x+3, 2]
         
-        # sobel 
+        # Sobel 
         gradient_r = abs(np.sum(subimg_r * sobel_gradient_y_mask)) + abs(np.sum(subimg_r * sobel_gradient_x_mask))
         gradient_g = abs(np.sum(subimg_g * sobel_gradient_y_mask)) + abs(np.sum(subimg_g * sobel_gradient_x_mask))
         gradient_b = abs(np.sum(subimg_b * sobel_gradient_y_mask)) + abs(np.sum(subimg_b * sobel_gradient_x_mask))
-        
-        laplacian_r = np.sum(subimg_r * laplacian_mask)
-        laplacian_g = np.sum(subimg_g * laplacian_mask)
-        laplacian_b = np.sum(subimg_b * laplacian_mask)
-        
-        # if laplacian_r > 300:
-        #     print('subimg_r:', subimg_r)
-        #     print('laplacian:', subimg_r * laplacian_mask)
-        #     print('laplacian_r:', laplacian_r)
         
         edge_pic[y, x, 0] = gradient_r
         edge_pic[y, x, 1] = gradient_g
         edge_pic[y, x, 2] = gradient_b
               
+        # Laplacian
+        laplacian_r = np.sum(subimg_r * laplacian_mask)
+        laplacian_g = np.sum(subimg_g * laplacian_mask)
+        laplacian_b = np.sum(subimg_b * laplacian_mask)
+        
         laplacian_pic[y, x, 0] = laplacian_r
         laplacian_pic[y, x, 1] = laplacian_g
         laplacian_pic[y, x, 2] = laplacian_b
@@ -102,19 +99,9 @@ for y in range(padding_pic.shape[0]-2):
 sharped_pic = pic + laplacian_pic
 print('sharped_pic:', sharped_pic)
 
-
 sharped_pic[sharped_pic > 255] = 255
 sharped_pic[sharped_pic < 0] = 0
 print('sharped_pic_rearange:', sharped_pic)
-
-# sharped_pic = cv2.normalize(sharped_pic,None,0,255,cv2.NORM_MINMAX)        
-# sharped_pic = sharped_pic.astype(np.uint8)
-# print('sharped_pic_255:', sharped_pic)
-
-
-
-# sharped_pic = cv2.normalize(sharped_pic,None,0,255,cv2.NORM_MINMAX)        
-# sharped_pic = sharped_pic.astype(np.uint8)
 
 
 # Sobel Sharpening...        
@@ -140,20 +127,16 @@ for y in range(padding_pic.shape[0]-2):
         print(y, x, avg_r)
     print()
 
-# edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, edge_blur_pic_normalized)  ## 這個不會成功，與下面的 normalization 0, 1 有什麼差別？  mean 在 0 的 normalization?? 有正有負？
+# edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, edge_blur_pic_normalized)  ## 這個不會成功，與下面的 normalization 0, 1 有什麼差別？ 不帶參數預設定 L2 Norm?? 
 # edge_blur_pic_normalized2 = edge_blur_pic / np.linalg.norm(edge_blur_pic)   ## 跟上一行用 cv2 算 normalization 一樣的值
-edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, None, 0, 1, cv2.NORM_MINMAX)  ## 這個會成功
+edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, None, 0, 1, cv2.NORM_MINMAX)  ## 這個會成功，上兩式不是 normalize 到 0~1 之間
 print('edge_blur_pic_normalized_1:\n', edge_blur_pic_normalized)
-
-
-# edge_blur_pic_normalized = normalize(edge_blur_pic_normalized[:,np.newaxis], axis=0).ravel()
-# print('edge_blur_pic_normalized_2:\n', edge_blur_pic_normalized)
 
 
 avgMtpLapl = laplacian_pic * edge_blur_pic_normalized   # 二階微分 乘以 一階微分平均模糊
 print('avgMtpLapl:\n', avgMtpLapl)
 
-
+# Sobel Sharpening, 原圖加上blur後的edge
 sharped_sobel_pic = pic + avgMtpLapl
 
 edge_pic = cv2.normalize(edge_pic,None,0,255,cv2.NORM_MINMAX)        
@@ -161,9 +144,6 @@ edge_pic = edge_pic.astype(np.uint8)
 
 edge_blur_pic = cv2.normalize(edge_blur_pic,None,0,255,cv2.NORM_MINMAX)        
 edge_blur_pic = edge_blur_pic.astype(np.uint8)
-
-# avgMtpLapl_pic = cv2.normalize(avgMtpLapl,None,0,255,cv2.NORM_MINMAX)        
-# avgMtpLapl_pic = avgMtpLapl_pic.astype(np.uint8)
 
 laplacian_pic = cv2.normalize(laplacian_pic,None,0,255,cv2.NORM_MINMAX)        
 laplacian_pic = laplacian_pic.astype(np.uint8)
@@ -173,7 +153,6 @@ cv2.imwrite('output/' + img_file + "_gradient.jpg", edge_pic)
 
 cv2.imwrite('output/' + img_file + "_gradient_blur.jpg", edge_blur_pic)
 
-# cv2.imwrite('output/' + img_file + "_avgMtpLapl_alpha" + str(alpha) + ".jpg", avgMtpLaplc)
 cv2.imwrite('output/' + img_file + "_avgMtpLapl.jpg", avgMtpLapl)
 
 # cv2.imshow('laplacian', laplacian_pic)
@@ -185,10 +164,8 @@ cv2.imwrite('output/' + img_file + "_sharped.jpg", sharped_pic)
 # cv2.imshow('sharped_sobel', sharped_sobel_pic)
 cv2.imwrite('output/' + img_file + "_sharped_sobel.jpg", sharped_sobel_pic)
 
-# +
 # cv2.waitKey(0)
 # cv2.destroyAllWindows()
-# -
 
 
 
