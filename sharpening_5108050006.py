@@ -127,6 +127,7 @@ for y in range(padding_pic.shape[0]-2):
         print(y, x, avg_r)
     print()
 
+# 這邊卡關很久，以為cv2.normalize()預設是 normalize 到 0~1 之間。
 # edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, edge_blur_pic_normalized)  ## 這個不會成功，與下面的 normalization 0, 1 有什麼差別？ 不帶參數預設定 L2 Norm?? 
 # edge_blur_pic_normalized2 = edge_blur_pic / np.linalg.norm(edge_blur_pic)   ## 跟上一行用 cv2 算 normalization 一樣的值
 edge_blur_pic_normalized = cv2.normalize(edge_blur_pic, None, 0, 1, cv2.NORM_MINMAX)  ## 這個會成功，上兩式不是 normalize 到 0~1 之間
