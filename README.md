@@ -102,4 +102,10 @@
 | 銳化<br/>版本一 | <img src="output/flower_1_shapred.jpg"/> | 
 | 銳化<br/>版本二 | <img src="output/flower_1_shapred_sobel.jpg" /> |
 
+| | IMG_7367_2.jpg |
+|-|-|
+| 原圖 | <img src="images/IMG_7367_2.jpg" />  | 
+| 銳化<br/>版本一 | <img src="output/IMG_7367_2_shapred.jpg"/> | 
+| 銳化<br/>版本二 | <img src="output/IMG_7367_2_shapred_sobel.jpg" /> |
+
 
