@@ -42,7 +42,7 @@
  **原圖經過 Laplacian Convolution得到下圖**    <img src="https://latex.codecogs.com/gif.latex?%5Cnabla%5E2%20f%28x%2Cy%29" />
 <img src="output/lenna_laplacian.jpg" />
  **銳化 <版本一>**  <img src="https://latex.codecogs.com/gif.latex?f%28x%2Cy%29%2B%5Cnabla%5E2%20f%28x%2Cy%29" />
-<img src="output/lenna_shapred.jpg" />
+<img src="output/lenna_sharped.jpg" />
  ### 缺點∶是銳化了，但也製造出很多雜訊!
  
 ---
@@ -85,7 +85,7 @@
     * #### Laplacian * Step 3 有助於將雜訊去除，只留下 edge 處要進行銳化。
 
     * #### 銳化效果版本二。對比原圖，細節被加強，且沒有版本一嚴重的雜訊。
-    <img src="output/lenna_shapred_sobel.jpg" />
+    <img src="output/lenna_sharped_sobel.jpg" />
 
     * #### 原圖
     <img src="images/lenna.jpg" />
@@ -94,19 +94,19 @@
 | | 20070401_121.jpg |
 |-|-|
 | 原圖 | <img src="images/20070401_121.jpg"/>  | 
-| 銳化<br/>版本一 | <img src="output/20070401_121_shapred.jpg" /> | 
-| 銳化<br/>版本二 | <img src="output/20070401_121_shapred_sobel.jpg" /> |
+| 銳化<br/>版本一 | <img src="output/20070401_121_sharped.jpg" /> | 
+| 銳化<br/>版本二 | <img src="output/20070401_121_sharped_sobel.jpg" /> |
 
 | | flower_1.jpg |
 |-|-|
 | 原圖 | <img src="images/flower_1.jpg" />  | 
-| 銳化<br/>版本一 | <img src="output/flower_1_shapred.jpg"/> | 
-| 銳化<br/>版本二 | <img src="output/flower_1_shapred_sobel.jpg" /> |
+| 銳化<br/>版本一 | <img src="output/flower_1_sharped.jpg"/> | 
+| 銳化<br/>版本二 | <img src="output/flower_1_sharped_sobel.jpg" /> |
 
 | | IMG_7367_2.jpg |
 |-|-|
 | 原圖 | <img src="images/IMG_7367_2.jpg" />  | 
-| 銳化<br/>版本一 | <img src="output/IMG_7367_2_shapred.jpg"/> | 
-| 銳化<br/>版本二 | <img src="output/IMG_7367_2_shapred_sobel.jpg" /> |
+| 銳化<br/>版本一 | <img src="output/IMG_7367_2_sharped.jpg"/> | 
+| 銳化<br/>版本二 | <img src="output/IMG_7367_2_sharped_sobel.jpg" /> |
 
 
