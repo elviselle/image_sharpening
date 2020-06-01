@@ -103,6 +103,13 @@
 | 銳化<br/>版本一 | <img src="output/flower_1_sharped.jpg"/> | 
 | 銳化<br/>版本二 | <img src="output/flower_1_sharped_sobel.jpg" /> |
 
+| | bird_4_crop.jpg |
+|-|-|
+| 原圖 | <img src="images/bird_4_crop.jpg" />  | 
+| 銳化<br/>版本一 | <img src="output/bird_4_corp_sharped.jpg"/> | 
+| 銳化<br/>版本二 | <img src="output/bird_4_corp_sharped_sobel.jpg" /> |
+
+
 | | IMG_7367_2.jpg |
 |-|-|
 | 原圖 | <img src="images/IMG_7367_2.jpg" />  | 
