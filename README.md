@@ -1,4 +1,7 @@
 # Image Sharpening - 影像銳化
+> 本文與程式上傳至GitHub，連結 QR Code
+
+![](https://github.com/elviselle/image_sharpening/blob/master/.readme_imgs/url_qrcode.png)
 
 ## 影像微分
 
