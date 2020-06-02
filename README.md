@@ -59,7 +59,7 @@
     * #### step 4) 原圖 + Lapacian * Step3。
 
   * #### Step 1
-    * #### 原圖分別計算水平、垂直 Sobel 運算後，加總
+    * #### Sobel 運算：原圖分別計算水平、垂直 Sobel Kernel 做 Convolution 運算後加總，可將 edge 找出來。
     * #### Sobel Kernel
       * ##### Horizontal 
         <img src="https://latex.codecogs.com/gif.latex?%5Cbegin%7Bbmatrix%7D-1%20%26%20-2%20%26%20-1%5C%5C0%20%26%200%20%26%200%5C%5C1%20%26%202%20%26%201%5C%5C%5Cend%7Bbmatrix%7D" /> 
@@ -109,7 +109,7 @@
 | | bird_4_crop.jpg |
 |-|-|
 | 原圖 | <img src="images/bird_4_crop.jpg" />  | 
-| 銳化<br/>版本一 | <img src="output/bird_4_corp_sharped.jpg"/> | 
+| 銳化<br/>版本一<br/>悲劇了 | <img src="output/bird_4_corp_sharped.jpg"/> | 
 | 銳化<br/>版本二 | <img src="output/bird_4_corp_sharped_sobel.jpg" /> |
 
 
